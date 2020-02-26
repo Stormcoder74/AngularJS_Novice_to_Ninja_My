@@ -9,4 +9,11 @@ angular.module('myApp.controllers', [])
         $scope.result = function () {
             return $scope.salary * $scope.percentage * 0.01;
         };
-    });
+    })
+    .controller('MyCtrl1', [function () {
+
+    }])
+    .controller('MyCtrl2', [function () {
+
+    }])
+;
