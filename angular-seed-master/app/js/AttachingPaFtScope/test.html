@@ -4,6 +4,8 @@
     </head>
     <body ng-controller="GreetingController">
         {{greeting}} User! The current date/time is <span>{{now | date:'medium'}}</span>
+        <br/><br/>
+        <button ng-click="getRandomHelloMessage()">Random Hello Message</button>
 
         <script src="../../lib/angular/angular.js"></script>
         <script src="controller.js"></script>
