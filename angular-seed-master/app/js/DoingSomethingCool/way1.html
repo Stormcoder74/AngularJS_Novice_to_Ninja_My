@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Plain JS Way</title>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function(e) {
+                document.getElementById('fbID').addEventListener('keyup', function(event) {
+                    var fbID = document.getElementById('fbID').value;
+                    var pictureURL = 'https://graph.facebook.com/' + fbID + '/picture?type=normal';
+                    document.getElementById('profilePic').src = pictureURL;
+                });
+            });
+        </script>
+    </head>
+    <body>
+    <input type="text" id="fbID" />
+    <br/>
+    <span><img src="" title="fb image" id="profilePic"/></span>
+    </body>
+</html>
