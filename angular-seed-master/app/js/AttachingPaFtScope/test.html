@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="myApp.greeting">
     <head>
-    </head>
-    <body ng-controller="GreetingController">
-        {{greeting}} User! The current date/time is <span>{{now | date:'medium'}}</span>
-        <br/><br/>
-        <button ng-click="getRandomHelloMessage()">Random Hello Message</button>
-
         <script src="../../lib/angular/angular.js"></script>
         <script src="controller.js"></script>
+    </head>
+    <body ng-controller="GreetingController as greetingController">
+        {{greetingController.greeting}} User! The current date/time is <span>{{greetingController.now | date:'medium'}}</span>
+        <br/><br/>
+        <button ng-click="greetingController.getRandomHelloMessage()">Random Hello Message</button>
     </body>
 </html>
