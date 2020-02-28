@@ -40,3 +40,13 @@ angular.module('myApp')
             }, 3000);
         };
     });
+
+angular.module('myApp')
+    .controller('TimeoutController2', function ($scope, $timeout) {
+        $scope.fetchMessage = function () {
+            $timeout(function () {
+                $scope.message = 'Fetched after 3 seconds'; //just update. No need for $apply
+                console.log('message=' + $scope.message);
+            }, 3000);
+        }
+    });
