@@ -1,2 +1,4 @@
 /.idea/
 /AngularJS_Novice_to_Ninja_My.iml
+*/*.zip
+*.zip
