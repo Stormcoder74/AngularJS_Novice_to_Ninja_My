@@ -3,6 +3,9 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
+    .controller('Controller', function ($scope) {
+
+    })
     .controller('Controller1', function ($scope) {
         $scope.message = "Hello, world";
     })
