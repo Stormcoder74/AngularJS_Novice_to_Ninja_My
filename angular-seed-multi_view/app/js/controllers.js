@@ -2,10 +2,10 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
-
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+angular.module('myApp.controllers', [])
+    .controller('Controller1', function ($scope) {
+        $scope.message = "Hello, world";
+    })
+    .controller('Controller2', function ($scope) {
+        $scope.now = new Date();
+    });
