@@ -3,12 +3,12 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-    .controller('Controller', function ($scope) {
-
+    .controller('Controller1', function ($scope, $location) {
+        $scope.loadView2 = function(){
+            $location.path('/view2/' + $scope.firstname + '/' + $scope.lastname);
+        }
     })
-    .controller('Controller1', function ($scope) {
-        $scope.message = "Hello, world";
-    })
-    .controller('Controller2', function ($scope) {
-        $scope.now = new Date();
+    .controller('Controller2', function ($scope, $routeParams) {
+        $scope.firstname = $routeParams.firstname;
+        $scope.lastname = $routeParams.lastname;
     });
